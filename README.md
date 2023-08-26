@@ -5,7 +5,7 @@
 
 ## Schema
 ```typescript
-type BTCHackerspaceMembershipVC = {
+type BitcoinHackerspaceMembershipVC = {
     name: String
     contact: {
         email: String
@@ -43,8 +43,11 @@ type BTCHackerspaceMembershipVC = {
         }
     },
     "network": {
-        "name": "federation of bitcoin hackerspace",
-        "participants": ["atl bitlab", "pleblab"]
+        "name": "Federation of Bitcoin Hackerspaces",
+        "country": "US",
+        "states": ["georgia", "texas"],
+        "cities": ["atlanta", "austin"],
+        "organizations": ["atl bitlab", "pleblab"]
     },
     "membership": {
         "title": "Digital Nomad",
