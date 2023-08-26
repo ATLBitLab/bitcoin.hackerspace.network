@@ -47,6 +47,7 @@ type BTCHackerspaceMembershipVC = {
         "participants": ["atl bitlab", "pleblab"]
     },
     "membership": {
+        "title": "Digital Nomad",
         "tier": 0,
         "type": "day pass",
         "description": "free day pass redeemable by the holder at any of the network participant locations",
