@@ -36,7 +36,7 @@ type BTCHackerspaceMembershipVC = {
     "contact": {
         "email": "pleb@atlbitlab.com",
         "telegram": "pleb",
-        "twitter": "pleb",
+        "x": "pleb",
         "nostr": {
             "npub": "npub123456...",
             "nip5": "pleb@atlbitlab.com"
