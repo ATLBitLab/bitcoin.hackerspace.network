@@ -37,21 +37,20 @@ type BTCHackerspaceMembershipVC = {
 
 ```json
 {
-  "name": "pleb",
-  "contact": {
-    "email": "pleb@atlbitlab.com",
-    "telegram": "pleb",
-    "x": "pleb",
-    "nostr": {
-      "npub": "npub123456...",
-      "nip5": "pleb@atlbitlab.com"
-    }
+  "holder": {
+    "name": "abbot",
+    "email": "abbot@atlbitlab.com",
+    "website": "https://abbot.atlbitlab.com",
+    "telegram": "abbot",
+    "x": "abbot",
+    "npub": "npub123456...",
+    "nip5": "abbot@atlbitlab.com"
   },
   "network": {
-    "name": "Federation of Bitcoin Hackerspaces",
     "country": "US",
     "states": ["georgia", "texas"],
     "cities": ["atlanta", "austin"],
+    "name": "Federation of Bitcoin Hackerspaces",
     "organizations": ["atl bitlab", "pleblab"]
   },
   "membership": {
