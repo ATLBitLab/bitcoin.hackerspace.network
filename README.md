@@ -1,6 +1,11 @@
 # Bitcoin Hackerspace Membership VC
 
 ## Summary
+The goal of this document is to define a spec for a Self-Sovereign Identity Verifiable Credential schema for membership to a Bitcoin hacker space or a network of Bitcoin hacker spaces.
+Members holding one of these credentials have been verified by the issuer and are afforded certain rights, privileges, entitlements and/or benefits, such as:
+  - access to the issuing hacker space
+  - access to hacker spaces in the network defined in the VC
+  - access to amenities in those hacker spaces
 
 ## Schema
 
