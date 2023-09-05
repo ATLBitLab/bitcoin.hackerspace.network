@@ -1,68 +1,131 @@
-# Bitcoin Hackerspace Membership VC
+# Bitcoin Hackerspace Network Membership Credential
 
 ## Summary
-
+The goal of this document is to define a spec for a Self-Sovereign Identity Verifiable Credential schema to represent a member of a Bitcoin hackerspace.
+This member VC represents the holder and their membership to the issuing hackerspace and the list of participating hackerspaces.
+Members holding one of these credentials have been verified by the issuer and are afforded certain rights, privileges, entitlements and/or benefits, such as:
+  - access to the issuing hackerspace
+  - access to hackerspaces in the network as defined in the VC
+  - access to amenities in those hackerspaces
 ## Schema
 
-```typescript
-  type Bitcoin_Hackerspace_Membership_VC = {
-    holder: {
-      name: String;
-      email: String;
-      website: String;
-      telegram: String;
-      x: String;
-      npub: String;
-      nip5: String;
-    };
-    network: {
-      name: String;
-      country: String;
-      states: Array<String>;
-      cities: Array<String>;
-      organizations: Array<String>;
-    };
-    membership: {
-      title: String;
-      tier: Number;
-      description: String;
-      benefits: Array<String>;
-    };
-  };
+```json
+{
+  "member": {
+    "type": "object",
+    "description": "Details about the member including name, contact information, website and socials.",
+    "name": {
+      "type": "string",
+      "description": "The member's name."
+    },
+    "email": {
+      "type": "string",
+      "description": "The member's email."
+    },
+    "website": {
+      "type": "string",
+      "description": "website."
+    },
+    "telegram": {
+      "type": "string",
+      "description": "The member's telegram handle."
+    },
+    "x": {
+      "type": "string",
+      "description": "The member's X.com (f.k.a. Twitter) handle."
+    },
+    "npub": {
+      "type": "string",
+      "description": "The member's nostr npub."
+    },
+    "nip5": {
+      "type": "string",
+      "description": "The member's nostr nip5."
+    }
+  },
+  "network": {
+    "type": "object",
+    "description": "Details about the hackerspace network that the issuer and member belongs.",
+    "name": {
+      "type": "string",
+      "description": "The name of the network of hackerspaces that the issuer and member belong to."
+    },
+    "hackerspaces": {
+      "type": "array",
+      "description": "The hackerspaces participathing in the network that the member belongs to."
+    },
+    "countries": {
+      "type": "array",
+      "description": "The countries where the hackerspaces participating in the network are located."
+    },
+    "states": {
+      "type": "array",
+      "description": "The states where the hackerspaces participating in the network are located."
+    },
+    "cities": {
+      "type": "array",
+      "description": "The cities where the hackerspaces participating in the network are located."
+    }
+  },
+  "membership": {
+    "type": "object",
+    "description": "Details about the membership to the network hackerspaces.",
+    "issuer": {
+      "type": "string",
+      "description": "The name of hackerspace issuing the credential."
+    },
+    "title": {
+      "type": "string",
+      "description": "The membership title."
+    },
+    "tier": {
+      "type": "number",
+      "description": "The membership tier."
+    },
+    "description": {
+      "type": "string",
+      "description": "Any general information about the membership."
+    },
+    "benefits": {
+      "type": "array",
+      "description": "The amentities and benefits available to the membership tier."
+    }
+  }
+}
 ```
 
 ## Example
 
-```js
-  const member = {
-    holder: {
-      name: "abbot",
-      email: "abbot@atlbitlab.com",
-      website: "https://abbot.atlbitlab.com",
-      telegram: "abbot",
-      x: "abbot",
-      npub: "npub123456...",
-      nip5: "abbot@atlbitlab.com",
+```json
+  {
+    "member": {
+      "name": "abbot",
+      "email": "abbot@atlbitlab.com",
+      "website": "https://abbot.atlbitlab.com",
+      "telegram": "atl_bitlab_bot",
+      "x": "atlbitlabbot",
+      "npub": "npub1agq3p0xznd07eactnzv2lur7nd62uaj0vuar328et3u0kzjprzxqxcqvrk",
+      "nip5": "abbot@atlbitlab.com",
     },
-    network: {
-      name: "Federation of Bitcoin Hackerspaces",
-      country: "US",
-      states: ["georgia", "texas"],
-      cities: ["atlanta", "austin"],
-      organizations: ["atl bitlab", "pleblab"],
+    "network": {
+      "name": "Federation of Bitcoin Hackerspaces",
+      "hackerspaces": ["ATL BitLab", "PlebLab"],
+      "countries": ["United States of America"],
+      "states": ["Georgia", "Texas"],
+      "cities": ["Atlanta", "Austin"]
     },
-    membership: {
-      title: "Day Pass",
-      tier: 0,
-      description:
-        "free day pass redeemable by the holder listed at any of the network organizations listed",
-      benefits: [
+    "membership": {
+      "issuer": "ATL BitLab",
+      "title": "Day Pass",
+      "tier": 0,
+      "description": "The Day Pass membership is redeemable for one free work day at any of the hackerspaces participating in the network.",
+      "benefits": [
         "wifi",
-        "drinks",
+        "coffee",
         "snacks",
-        "hot_desk",
-        "conference_rooms",
-        "alcohol",
+        "hot desk",
+        "conference rooms",
+        "alcohol"
       ],
     },
   };
