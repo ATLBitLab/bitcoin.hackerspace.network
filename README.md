@@ -2,13 +2,12 @@
 
 ## Summary
 
-The goal of this document is to define a spec for a Self-Sovereign Identity Verifiable Credential schema to represent a member of a Bitcoin hackerspace.
-This member VC represents the holder and their membership to the issuing hackerspace and the list of participating hackerspaces.
-Members holding one of these credentials have been verified by the issuer and are afforded certain rights, privileges, entitlements and/or benefits, such as:
+The goal of this document is to define a schema for a Self-Sovereign Identity Verifiable Credential that represents a member of a Bitcoin hackerspace, the membership of that member, and the hackerspace network.
+The credential represents a member, their membership to the issuing hackerspace and their membership to the hackerspace network. Members holding one of these credentials have been verified and onboarded into the network by the issuer and are afforded certain rights, privileges, entitlements and/or benefits, such as:
 
 - access to the issuing hackerspace
-- access to hackerspaces in the network as defined in the VC
-- access to amenities in those hackerspaces
+- access to network hackerspaces
+- access to amenities at issuing hackerspace and network hackerspaces
 
 ## Schema
 
@@ -164,7 +163,7 @@ Members holding one of these credentials have been verified by the issuer and ar
 }
 ```
 
-## Example
+## Credential
 
 ```json
 {
