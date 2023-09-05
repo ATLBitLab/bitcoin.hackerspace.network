@@ -1,95 +1,140 @@
-# Bitcoin Hackerspace Network Membership Credential
+# Bitcoin Hackerspace Member Credential
 
 ## Summary
+
 The goal of this document is to define a spec for a Self-Sovereign Identity Verifiable Credential schema to represent a member of a Bitcoin hackerspace.
 This member VC represents the holder and their membership to the issuing hackerspace and the list of participating hackerspaces.
 Members holding one of these credentials have been verified by the issuer and are afforded certain rights, privileges, entitlements and/or benefits, such as:
-  - access to the issuing hackerspace
-  - access to hackerspaces in the network as defined in the VC
-  - access to amenities in those hackerspaces
+
+- access to the issuing hackerspace
+- access to hackerspaces in the network as defined in the VC
+- access to amenities in those hackerspaces
+
 ## Schema
 
 ```json
 {
-  "member": {
+  "name": "Bitcoin Hackerspace Member Credential",
+  "issuer": "did:key:z6MkhMe7QsyySXEQ6A8BJ1iaFAScNKaasZtmZ7ppsweovuDs",
+  "verificationMethodId": "did:key:z6MkhMe7QsyySXEQ6A8BJ1iaFAScNKaasZtmZ7ppsweovuDs#z6MkhMe7QsyySXEQ6A8BJ1iaFAScNKaasZtmZ7ppsweovuDs",
+  "description": "Credential representing a bitcoin hackerspace member, membership to the issuing hackerspace and membership to network of hackerspaces",
+  "schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
     "type": "object",
-    "description": "Details about the member including name, contact information, website and socials.",
-    "name": {
-      "type": "string",
-      "description": "The member's name."
+    "properties": {
+      "member": {
+        "type": "object",
+        "description": "Details about the member including name, contact information, website and socials.",
+        "required": ["name", "email"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The member's name."
+          },
+          "email": {
+            "type": "string",
+            "description": "The member's email."
+          },
+          "website": {
+            "type": "string",
+            "description": "The member's website."
+          },
+          "telegram": {
+            "type": "string",
+            "description": "Member telegram handle."
+          },
+          "x": {
+            "type": "string",
+            "description": "The member's X.com (f.k.a. Twitter) handle."
+          },
+          "npub": {
+            "type": "string",
+            "description": "The member's nostr npub."
+          },
+          "nip5": {
+            "type": "string",
+            "description": "The member's nostr nip5."
+          }
+        }
+      },
+      "membership": {
+        "type": "object",
+        "required": ["issuer", "title", "tier", "description", "benefits"],
+        "properties": {
+          "issuer": {
+            "type": "object",
+            "description": "The details of hackerspace issuing the credential.",
+            "required": ["website", "name", "country", "state", "city"],
+            "properties": {
+              "website": {
+                "type": "string",
+                "description": "The website of the issuing hackerspace."
+              },
+              "name": {
+                "type": "string",
+                "description": "The name of the issuing hackerspace."
+              },
+              "country": {
+                "type": "string",
+                "description": "The country of the issuing hackerspace."
+              },
+              "state": {
+                "type": "string",
+                "description": "The state of the issuing hackerspace."
+              },
+              "city": {
+                "type": "string",
+                "description": "The city of the issuing hackerspace."
+              }
+            }
+          },
+          "title": {
+            "type": "string",
+            "description": "The membership title."
+          },
+          "tier": {
+            "type": "number",
+            "description": "The membership tier."
+          },
+          "description": {
+            "type": "string",
+            "description": "Any general information about the membership."
+          },
+          "benefits": {
+            "type": "array",
+            "description": "The amentities and benefits available to the membership tier."
+          }
+        }
+      }
     },
-    "email": {
-      "type": "string",
-      "description": "The member's email."
+    "network": {
+      "type": "object",
+      "description": "Details about the hackerspace network that the issuer and member belong to.",
+      "required": ["name", "hackerspaces", "countries", "states", "cities"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the network of hackerspaces that the issuer and member belong to."
+        },
+        "hackerspaces": {
+          "type": "array",
+          "description": "The hackerspaces participathing in the network that the member belongs to."
+        },
+        "countries": {
+          "type": "array",
+          "description": "The countries where the hackerspaces participating in the network are located."
+        },
+        "states": {
+          "type": "array",
+          "description": "The states where the hackerspaces participating in the network are located."
+        },
+        "cities": {
+          "type": "array",
+          "description": "The cities where the hackerspaces participating in the network are located."
+        }
+      }
     },
-    "website": {
-      "type": "string",
-      "description": "website."
-    },
-    "telegram": {
-      "type": "string",
-      "description": "The member's telegram handle."
-    },
-    "x": {
-      "type": "string",
-      "description": "The member's X.com (f.k.a. Twitter) handle."
-    },
-    "npub": {
-      "type": "string",
-      "description": "The member's nostr npub."
-    },
-    "nip5": {
-      "type": "string",
-      "description": "The member's nostr nip5."
-    }
-  },
-  "network": {
-    "type": "object",
-    "description": "Details about the hackerspace network that the issuer and member belongs.",
-    "name": {
-      "type": "string",
-      "description": "The name of the network of hackerspaces that the issuer and member belong to."
-    },
-    "hackerspaces": {
-      "type": "array",
-      "description": "The hackerspaces participathing in the network that the member belongs to."
-    },
-    "countries": {
-      "type": "array",
-      "description": "The countries where the hackerspaces participating in the network are located."
-    },
-    "states": {
-      "type": "array",
-      "description": "The states where the hackerspaces participating in the network are located."
-    },
-    "cities": {
-      "type": "array",
-      "description": "The cities where the hackerspaces participating in the network are located."
-    }
-  },
-  "membership": {
-    "type": "object",
-    "description": "Details about the membership to the network hackerspaces.",
-    "issuer": {
-      "type": "string",
-      "description": "The name of hackerspace issuing the credential."
-    },
-    "title": {
-      "type": "string",
-      "description": "The membership title."
-    },
-    "tier": {
-      "type": "number",
-      "description": "The membership tier."
-    },
-    "description": {
-      "type": "string",
-      "description": "Any general information about the membership."
-    },
-    "benefits": {
-      "type": "array",
-      "description": "The amentities and benefits available to the membership tier."
-    }
+    "required": ["member", "membership", "network"]
   }
 }
 ```
