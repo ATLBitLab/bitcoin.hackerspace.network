@@ -25,7 +25,10 @@ Members holding one of these credentials have been verified by the issuer and ar
       "member": {
         "type": "object",
         "description": "Details about the member including name, contact information, website and socials.",
-        "required": ["name", "email"],
+        "required": [
+          "name",
+          "email"
+        ],
         "properties": {
           "name": {
             "type": "string",
@@ -59,12 +62,24 @@ Members holding one of these credentials have been verified by the issuer and ar
       },
       "membership": {
         "type": "object",
-        "required": ["issuer", "title", "tier", "description", "benefits"],
+        "required": [
+          "issuer",
+          "title",
+          "tier",
+          "description",
+          "benefits"
+        ],
         "properties": {
           "issuer": {
             "type": "object",
             "description": "The details of hackerspace issuing the credential.",
-            "required": ["website", "name", "country", "state", "city"],
+            "required": [
+              "website",
+              "name",
+              "country",
+              "state",
+              "city"
+            ],
             "properties": {
               "website": {
                 "type": "string",
@@ -110,7 +125,13 @@ Members holding one of these credentials have been verified by the issuer and ar
     "network": {
       "type": "object",
       "description": "Details about the hackerspace network that the issuer and member belong to.",
-      "required": ["name", "hackerspaces", "countries", "states", "cities"],
+      "required": [
+        "name",
+        "hackerspaces",
+        "countries",
+        "states",
+        "cities"
+      ],
       "properties": {
         "name": {
           "type": "string",
@@ -134,7 +155,11 @@ Members holding one of these credentials have been verified by the issuer and ar
         }
       }
     },
-    "required": ["member", "membership", "network"]
+    "required": [
+      "member",
+      "membership",
+      "network"
+    ]
   }
 }
 ```
@@ -142,36 +167,53 @@ Members holding one of these credentials have been verified by the issuer and ar
 ## Example
 
 ```json
-  {
-    "member": {
-      "name": "abbot",
-      "email": "abbot@atlbitlab.com",
-      "website": "https://abbot.atlbitlab.com",
-      "telegram": "atl_bitlab_bot",
-      "x": "atlbitlabbot",
-      "npub": "npub1agq3p0xznd07eactnzv2lur7nd62uaj0vuar328et3u0kzjprzxqxcqvrk",
-      "nip5": "abbot@atlbitlab.com",
+{
+  "member": {
+    "name": "abbot",
+    "email": "abbot@atlbitlab.com",
+    "website": "https://abbot.atlbitlab.com",
+    "telegram": "atl_bitlab_bot",
+    "x": "atlbitlabbot",
+    "npub": "npub1agq3p0xznd07eactnzv2lur7nd62uaj0vuar328et3u0kzjprzxqxcqvrk",
+    "nip5": "abbot@atlbitlab.com",
+  },
+  "membership": {
+    "issuer": {
+      "website": "https://atlbitlab.com",
+      "name": "ATL BitLab",
+      "country": "United States of America",
+      "state": "Georgia",
+      "city": "Atlanta"
     },
-    "network": {
-      "name": "Federation of Bitcoin Hackerspaces",
-      "hackerspaces": ["ATL BitLab", "PlebLab"],
-      "countries": ["United States of America"],
-      "states": ["Georgia", "Texas"],
-      "cities": ["Atlanta", "Austin"]
-    },
-    "membership": {
-      "issuer": "ATL BitLab",
-      "title": "Day Pass",
-      "tier": 0,
-      "description": "The Day Pass membership is redeemable for one free work day at any of the hackerspaces participating in the network.",
-      "benefits": [
-        "wifi",
-        "coffee",
-        "snacks",
-        "hot desk",
-        "conference rooms",
-        "alcohol"
-      ],
-    },
-  };
+    "title": "Day Pass",
+    "tier": 0,
+    "description": "The Day Pass membership is redeemable for one free work day at any of the hackerspaces participating in the network.",
+    "benefits": [
+      "wifi",
+      "coffee",
+      "snacks",
+      "hot desk",
+      "conference rooms",
+      "alcohol"
+    ]
+  },
+  "network": {
+    "name": "Federation of Bitcoin Hackerspaces",
+    "hackerspaces": [
+      "ATL BitLab",
+      "PlebLab"
+    ],
+    "countries": [
+      "United States of America"
+    ],
+    "states": [
+      "Georgia",
+      "Texas"
+    ],
+    "cities": [
+      "Atlanta",
+      "Austin"
+    ]
+  }
+}
 ```
