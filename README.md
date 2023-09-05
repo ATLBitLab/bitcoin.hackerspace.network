@@ -186,7 +186,7 @@ The credential represents a member, their membership to the issuing hackerspace 
     },
     "title": "Day Pass",
     "tier": 0,
-    "description": "The Day Pass membership is redeemable for one free work day at any of the hackerspaces participating in the network.",
+    "description": "This credential is redeemable for one free work day at any of the hackerspaces participating in the network.",
     "benefits": [
       "wifi",
       "coffee",
