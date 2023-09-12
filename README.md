@@ -14,7 +14,7 @@ The credential represents a member, their membership to the issuing hackerspace,
 
 ```json
 {
-  "name": "bitcoin hackerspace member credential",
+  "name": "the bitcoin hackerspace initiative - member credential",
   "issuer": "did:key:z6MkhMe7QsyySXEQ6A8BJ1iaFAScNKaasZtmZ7ppsweovuDs",
   "verificationMethodId": "did:key:z6MkhMe7QsyySXEQ6A8BJ1iaFAScNKaasZtmZ7ppsweovuDs#z6MkhMe7QsyySXEQ6A8BJ1iaFAScNKaasZtmZ7ppsweovuDs",
   "description": "Credential representing a bitcoin hackerspace member, membership to the issuing hackerspace and membership to network of hackerspaces",
