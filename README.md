@@ -1,19 +1,20 @@
-# Bitcoin Hackerspace Member Credential
+# the bitcoin hackerspace initiative
 
 ## Summary
 
-The goal of this document is to define a schema for a Self-Sovereign Identity Verifiable Credential that represents a member of a Bitcoin hackerspace, the membership of that member, and the hackerspace network.
-The credential represents a member, their membership to the issuing hackerspace and their membership to the hackerspace network. Members holding one of these credentials have been verified and onboarded into the network by the issuer and are afforded certain rights, privileges, entitlements and/or benefits, such as:
+The goal of this document is to define a schema for a Self-Sovereign Identity Verifiable Credential.
 
-- access to the issuing hackerspace
-- access to network hackerspaces
-- access to amenities at issuing hackerspace and network hackerspaces
+The credential represents a member, their membership to the issuing hackerspace, their membership and the issuer's membership to the bitcoin hackerspace initiative network. Members holding one of these credentials have been verified and onboarded into the network by the issuer and are afforded certain rights, privileges, entitlements and/or benefits, such as:
+
+- access to the issuing hackerspace as defined in the schema
+- access to network of hackerspaces as defined in the schema
+- access to amenities at issuing hackerspace and network hackerspaces as defined in the schema
 
 ## Schema
 
 ```json
 {
-  "name": "Bitcoin Hackerspace Member Credential",
+  "name": "bitcoin hackerspace member credential",
   "issuer": "did:key:z6MkhMe7QsyySXEQ6A8BJ1iaFAScNKaasZtmZ7ppsweovuDs",
   "verificationMethodId": "did:key:z6MkhMe7QsyySXEQ6A8BJ1iaFAScNKaasZtmZ7ppsweovuDs#z6MkhMe7QsyySXEQ6A8BJ1iaFAScNKaasZtmZ7ppsweovuDs",
   "description": "Credential representing a bitcoin hackerspace member, membership to the issuing hackerspace and membership to network of hackerspaces",
@@ -197,7 +198,7 @@ The credential represents a member, their membership to the issuing hackerspace 
     ]
   },
   "network": {
-    "name": "Federation of Bitcoin Hackerspaces",
+    "name": "the bitcoin hackerspace initiative",
     "hackerspaces": [
       "ATL BitLab",
       "PlebLab"
