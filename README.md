@@ -20,3 +20,13 @@ By onboarding to a local hackerspace in init:**bithacknet**, users can enjoy the
    - implement TBD primitives building a "one-click" hackerspace technical repo
    - research alternative protocols and interoperability with SSI/DIDs (e.g. nostr)
 5. Scale all business and technical resources to the world onboarding all bitcoin hackerspaces
+
+
+## Schemas
+Below are various schemas for credentials that can be signed by an issuing key and sent to a receiving key who holds the credential.
+Later, the holder can present the credential as proof of their membership to a hackerspace in the network.
+- [Current Working Schema: Network, Membership, Member](./schemas/current.json)
+- [Network Schema](./schemas/network.json)
+- [Hackerspace Schema](./schemas/hackerspace.json)
+- [Membership Schema](./schemas/membership.json)
+- [Member Schema](./schemas/member.json)

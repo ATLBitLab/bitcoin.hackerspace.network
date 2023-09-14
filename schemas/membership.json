@@ -1,0 +1,75 @@
+{
+  "name": "Bitcoin Hackerspace Network (BTCHackNet) - membership",
+  "issuer": "did:key:z6Mkgza8PyhXaCKYZr7ebHczB6mQs1JxvQkkQC5ZMnmFyKrq",
+  "verificationMethodId": "did:key:z6Mkgza8PyhXaCKYZr7ebHczB6mQs1JxvQkkQC5ZMnmFyKrq#z6Mkgza8PyhXaCKYZr7ebHczB6mQs1JxvQkkQC5ZMnmFyKrq",
+  "description": "Credential representing a bitcoin hackerspace member, membership to the issuing hackerspace and membership to network of hackerspaces",
+  "schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+      "issuer": {
+        "type": "object",
+        "description": "The details of the hackerspace issuing the credential.",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the issuing hackerspace."
+          },
+          "did": {
+            "type": "string",
+            "description": "The did:key of the issuing hackerspace."
+          },
+          "network": {
+            "type": "string",
+            "description": "The name of the hackerspace network."
+          },
+          "website": {
+            "type": "string",
+            "description": "The website of the issuing hackerspace."
+          },
+          "country": {
+            "type": "string",
+            "description": "The country of the issuing hackerspace."
+          },
+          "state": {
+            "type": "string",
+            "description": "The state of the issuing hackerspace."
+          },
+          "city": {
+            "type": "string",
+            "description": "The city of the issuing hackerspace."
+          }
+        },
+        "required": [
+          "website",
+          "did",
+          "name",
+          "country",
+          "state",
+          "city"
+        ]
+      },
+      "title": {
+        "type": "string",
+        "description": "The membership title."
+      },
+      "tier": {
+        "type": "number",
+        "description": "The membership tier."
+      },
+      "description": {
+        "type": "string",
+        "description": "Any general information about the membership."
+      },
+      "benefits": {
+        "type": "array",
+        "description": "The amentities and benefits available to the membership tier."
+      }
+    },
+    "required": [
+      "issuer",
+      "description",
+      "benefits"
+    ]
+  }
+}

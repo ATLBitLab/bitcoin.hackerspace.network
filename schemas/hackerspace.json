@@ -1,8 +1,8 @@
 {
-  "name": "the bitcoin hackerspace network initiative: hackerspace credential",
-  "issuer": "did:key:xyz123",
-  "verificationMethodId": "did:key:xyz123",
-  "description": "JSON schema of claims representing a hackerspace identity and its membership participation in the bitcoin hackerspace network initiative.",
+  "name": "Bitcoin Hackerspace Network (BTCHackNet) - hackerspace",
+  "issuer": "did:key:z6Mkgza8PyhXaCKYZr7ebHczB6mQs1JxvQkkQC5ZMnmFyKrq",
+  "verificationMethodId": "did:key:z6Mkgza8PyhXaCKYZr7ebHczB6mQs1JxvQkkQC5ZMnmFyKrq#z6Mkgza8PyhXaCKYZr7ebHczB6mQs1JxvQkkQC5ZMnmFyKrq",
+  "description": "JSON schema of claims about a hackerspace. This credential represents a the membership of a hackerspace to the network and designates whether or not the holder is a self-sovereign issuer.",
   "schema": {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "type": "object",

@@ -1,0 +1,45 @@
+{
+  "name": "Bitcoin Hackerspace Network (BTCHackNet) - member",
+  "issuer": "did:key:z6Mkgza8PyhXaCKYZr7ebHczB6mQs1JxvQkkQC5ZMnmFyKrq",
+  "verificationMethodId": "did:key:z6Mkgza8PyhXaCKYZr7ebHczB6mQs1JxvQkkQC5ZMnmFyKrq#z6Mkgza8PyhXaCKYZr7ebHczB6mQs1JxvQkkQC5ZMnmFyKrq",
+  "description": "JSON schema of claims about memeber personal information. Required fields are name and email.",
+  "schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "description": "Details about the member including name, contact information, website and socials.",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Member name."
+      },
+      "email": {
+        "type": "string",
+        "description": "Member email."
+      },
+      "website": {
+        "type": "string",
+        "description": "Member website."
+      },
+      "telegram": {
+        "type": "string",
+        "description": "Member telegram handle."
+      },
+      "x": {
+        "type": "string",
+        "description": "Member twitter handle."
+      },
+      "npub": {
+        "type": "string",
+        "description": "Member nostr npub."
+      },
+      "nip5": {
+        "type": "string",
+        "description": "Member nostr nip5."
+      }
+    },
+    "required": [
+      "name",
+      "email"
+    ]
+  }
+}
