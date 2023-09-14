@@ -1,0 +1,81 @@
+{
+  "name": "Bitcoin Hackerspace Network (BTCHackNet) - hackerspace network",
+  "issuer": "did:key:z6Mkgza8PyhXaCKYZr7ebHczB6mQs1JxvQkkQC5ZMnmFyKrq",
+  "verificationMethodId": "did:key:z6Mkgza8PyhXaCKYZr7ebHczB6mQs1JxvQkkQC5ZMnmFyKrq#z6Mkgza8PyhXaCKYZr7ebHczB6mQs1JxvQkkQC5ZMnmFyKrq",
+  "description": "JSON schema for a verifiable credential representing a hackerspace participating in the bitcoin hackerspace network",
+  "schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "description": "Details about the hackerspace network that the issuer and member belong to.",
+    "required": [
+      "name",
+      "hackerspaces",
+      "countries",
+      "states",
+      "cities"
+    ],
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "The name of the network of hackerspaces that the issuer and member belong to."
+      },
+      "hackerspaces": {
+        "type": "array",
+        "description": "The hackerspaces participathing in the network that the member belongs to."
+      },
+      "countries": {
+        "type": "array",
+        "description": "The countries where the hackerspaces participating in the network are located."
+      },
+      "states": {
+        "type": "array",
+        "description": "The states where the hackerspaces participating in the network are located."
+      },
+      "cities": {
+        "type": "array",
+        "description": "The cities where the hackerspaces participating in the network are located."
+      }
+    }
+  }
+}
+// TODO: merge these
+{
+  "name": "Bitcoin Hackerspace Network (BTCHackNet) - hackerspace",
+  "issuer": "did:key:z6Mkgza8PyhXaCKYZr7ebHczB6mQs1JxvQkkQC5ZMnmFyKrq",
+  "verificationMethodId": "did:key:z6Mkgza8PyhXaCKYZr7ebHczB6mQs1JxvQkkQC5ZMnmFyKrq#z6Mkgza8PyhXaCKYZr7ebHczB6mQs1JxvQkkQC5ZMnmFyKrq",
+  "description": "JSON schema of claims about a hackerspace. This credential represents a the membership of a hackerspace to the network and designates whether or not the holder is a self-sovereign issuer.",
+  "schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "description": "Details about the hackerspace that is joining the bitcoin hackerspace network initiative as a member organization and an issuer of member and membership credentials",
+    "required": [
+      "name",
+      "website",
+      "country",
+      "state",
+      "city"
+    ],
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Name of the hackerspace joining the network."
+      },
+      "website": {
+        "type": "string",
+        "description": "Website of the hackerspace joining the network."
+      },
+      "country": {
+        "type": "string",
+        "description": "The country of the issuing hackerspace."
+      },
+      "state": {
+        "type": "string",
+        "description": "The state of the issuing hackerspace."
+      },
+      "city": {
+        "type": "string",
+        "description": "The city of the issuing hackerspace."
+      }
+    }
+  }
+}
