@@ -1,0 +1,65 @@
+{
+    "member": {
+      "name": "abbot",
+      "email": "abbot@atlbitlab.com",
+      "website": "https://abbot.atlbitlab.com",
+      "telegram": "atl_bitlab_bot",
+      "x": "atlbitlabbot",
+      "npub": "npub1agq3p0xznd07eactnzv2lur7nd62uaj0vuar328et3u0kzjprzxqxcqvrk",
+      "nip5": "abbot@atlbitlab.com"
+    },
+    "membership": {
+      "issuer": {
+          "name": "ATL BitLab",
+          "did": "did:key:z6Mkgza8PyhXaCKYZr7ebHczB6mQs1JxvQkkQC5ZMnmFyKrq",
+          "website": "https://atlbitlab.com",
+          "country": "United States of America",
+          "state": "Georgia",
+          "city": "Atlanta"
+      },
+      "title": "Day Pass",
+      "tier": 0,
+      "description": "This credential is redeemable for one free work day at any of the hackerspaces participating in the network.",
+      "benefits": [
+        "wifi",
+        "coffee",
+        "snacks",
+        "hot desk",
+        "conference rooms",
+        "alcohol"
+      ]
+    },
+    "network": {
+      "name": "The Bitcoin Hackerspace Network Initiative",
+      "hackerspaces": [
+          [
+              "ATL BitLab",
+              "did:key:z6Mkgza8PyhXaCKYZr7ebHczB6mQs1JxvQkkQC5ZMnmFyKrq",
+              "United States of America",
+              "Georgia",
+              "Atlanta"
+          ],
+          [
+              "PlebLab",
+              "did:key:def789",
+              "United States of America",
+              "Texas",
+              "Austin"
+          ],
+          [
+              "Belgrade Bitcoin Hub",
+              "did:key:abc456",
+              "Belgrade",
+              "Belgrade",
+              "Serbia"
+          ],
+          [
+              "Bitcoin Grove",
+              "did:key:xyz123",
+              "United States of America",
+              "Florida",
+              "Miami"
+          ]
+      ]
+    }
+  }
