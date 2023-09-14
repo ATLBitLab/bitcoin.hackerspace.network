@@ -1,7 +1,9 @@
 ![image](https://github.com/ATLBitLab/bitcoin-hackerspace-network-initiative/assets/19941207/eab4c411-76bb-49de-ba99-17ad4c34e710)
 
 ## Summary
-initiative bitcoin hackerspace network is a self-sovereign movement to connect bitcoin-focused hackerspaces across the globe into a decentralized network of physical locations. doing so allows bitcoiners from near and far to onboard near to them and enjoy a community far. By onboarding to a local hackerspace in **bithacknet**, users can enjoy the benefits of a safe and bitcoin-focused communtity in all hackerspace network cities. Alternatively, hackerspace leaders can rest assured that the out-of-towner standing in front of them has been vetted and onboarded by a network hackerspace they trust In this way, we can lower the barriers to entry for all who want to learn how to build and fulfill the promise of local, community bitcoin hackerspaces - building more builders - while making it easier for hackerspace leaders to do so.
+Initiative: Bitcoin Hackerspace Network is a self-sovereign movement to connect bitcoin-focused hackerspaces across the globe into a decentralized network
+of physical bitcoin-only locations. Doing so allows bitcoiners from near and far to onboard near to them and enjoy a community far from them.
+By onboarding to a local hackerspace in init:**bithacknet**, users can enjoy the benefits of a safe and bitcoin-focused communtity in a number of countries around the world. Alternatively, hackerspace leaders can rest assured that the out-of-towner standing in front of them has been vetted and onboarded by a network hackerspace they trust. In this way, we can lower the barriers to entry for all who want to learn how to build and fulfill the promise of local, community-led bitcoin education and specifically that of bitcoin hackerspaces - building more builders.
 
 ## Goals
 1. Publish open-source documentation to allow future hackerspaces the ability to onboard themselves (self-sovereign) into the network
