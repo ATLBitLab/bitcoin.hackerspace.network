@@ -1,170 +1,20 @@
-# the bitcoin hackerspace initiative
+![image](https://github.com/ATLBitLab/bitcoin-hackerspace-network-initiative/assets/19941207/eab4c411-76bb-49de-ba99-17ad4c34e710)
 
 ## Summary
+initiative bitcoin hackerspace network is a self-sovereign movement to connect bitcoin-focused hackerspaces across the globe into a decentralized network of physical locations. doing so allows bitcoiners from near and far to onboard near to them and enjoy a community far. By onboarding to a local hackerspace in **bithacknet**, users can enjoy the benefits of a safe and bitcoin-focused communtity in all hackerspace network cities. Alternatively, hackerspace leaders can rest assured that the out-of-towner standing in front of them has been vetted and onboarded by a network hackerspace they trust In this way, we can lower the barriers to entry for all who want to learn how to build and fulfill the promise of local, community bitcoin hackerspaces - building more builders - while making it easier for hackerspace leaders to do so.
 
-The goal of this document is to define a schema for a Self-Sovereign Identity Verifiable Credential.
-
-The credential represents a member, their membership to the issuing hackerspace, their membership and the issuer's membership to the bitcoin hackerspace initiative network. Members holding one of these credentials have been verified and onboarded into the network by the issuer and are afforded certain rights, privileges, entitlements and/or benefits, such as:
-
-- access to the issuing hackerspace as defined in the schema
-- access to network of hackerspaces as defined in the schema
-- access to amenities at issuing hackerspace and network hackerspaces as defined in the schema
-
-## Schema
-
-```json
-{
-    "name": "The Bitcoin Hackerspace Network Initiative - member schema",
-    "issuer": "did:key:z6Mkgza8PyhXaCKYZr7ebHczB6mQs1JxvQkkQC5ZMnmFyKrq",
-    "verificationMethodId": "did:key:z6Mkgza8PyhXaCKYZr7ebHczB6mQs1JxvQkkQC5ZMnmFyKrq#z6Mkgza8PyhXaCKYZr7ebHczB6mQs1JxvQkkQC5ZMnmFyKrq",
-    "description": "Credential representing a bitcoin hackerspace member, membership to the issuing hackerspace and membership to network of hackerspaces",
-    "schema": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "type": "object",
-        "properties": {
-            "member": {
-                "type": "object",
-                "description": "Details about the member including name, contact information, website and socials.",
-                "required": [
-                    "name",
-                    "email"
-                ],
-                "properties": {
-                    "name": {
-                        "type": "string",
-                        "description": "The member's name."
-                    },
-                    "email": {
-                        "type": "string",
-                        "description": "The member's email."
-                    },
-                    "website": {
-                        "type": "string",
-                        "description": "The member's website."
-                    },
-                    "telegram": {
-                        "type": "string",
-                        "description": "Member telegram handle."
-                    },
-                    "x": {
-                        "type": "string",
-                        "description": "The member's X.com (f.k.a. Twitter) handle."
-                    },
-                    "npub": {
-                        "type": "string",
-                        "description": "The member's nostr npub."
-                    },
-                    "nip5": {
-                        "type": "string",
-                        "description": "The member's nostr nip5."
-                    }
-                }
-            },
-            "membership": {
-                "type": "object",
-                "required": [
-                    "issuer",
-                    "title",
-                    "tier",
-                    "description",
-                    "benefits"
-                ],
-                "properties": {
-                    "issuer": {
-                        "type": "object",
-                        "description": "The details of hackerspace issuing the credential.",
-                        "required": [
-                            "website",
-                            "did",
-                            "name",
-                            "country",
-                            "state",
-                            "city"
-                        ],
-                        "properties": {
-                            "website": {
-                                "type": "string",
-                                "description": "The website of the issuing hackerspace."
-                            },
-                            "did": {
-                                "type": "string",
-                                "description": "The did:key of the issuing hackerspace."
-                            },
-                            "name": {
-                                "type": "string",
-                                "description": "The name of the issuing hackerspace."
-                            },
-                            "country": {
-                                "type": "string",
-                                "description": "The country of the issuing hackerspace."
-                            },
-                            "state": {
-                                "type": "string",
-                                "description": "The state of the issuing hackerspace."
-                            },
-                            "city": {
-                                "type": "string",
-                                "description": "The city of the issuing hackerspace."
-                            }
-                        }
-                    },
-                    "title": {
-                        "type": "string",
-                        "description": "The membership title."
-                    },
-                    "tier": {
-                        "type": "number",
-                        "description": "The membership tier."
-                    },
-                    "description": {
-                        "type": "string",
-                        "description": "Any general information about the membership."
-                    },
-                    "benefits": {
-                        "type": "array",
-                        "description": "The amentities and benefits available to the membership tier."
-                    }
-                }
-            }
-        },
-        "network": {
-            "type": "object",
-            "description": "Details about the hackerspace network that the issuer and member belong to.",
-            "required": [
-                "name",
-                "hackerspaces",
-                "countries",
-                "states",
-                "cities"
-            ],
-            "properties": {
-                "name": {
-                    "type": "string",
-                    "description": "The name of the network of hackerspaces that the issuer and member belong to."
-                },
-                "hackerspaces": {
-                    "type": "array",
-                    "description": "The hackerspaces participathing in the network that the member belongs to."
-                },
-                "countries": {
-                    "type": "array",
-                    "description": "The countries where the hackerspaces participating in the network are located."
-                },
-                "states": {
-                    "type": "array",
-                    "description": "The states where the hackerspaces participating in the network are located."
-                },
-                "cities": {
-                    "type": "array",
-                    "description": "The cities where the hackerspaces participating in the network are located."
-                }
-            }
-        },
-        "required": [
-            "member",
-            "membership",
-            "network"
-        ]
-    }
-}
-```
+## Goals
+1. Publish open-source documentation to allow future hackerspaces the ability to onboard themselves (self-sovereign) into the network
+2. Define clear business requirements with resepect to cross-hackerspace, intra-network memebership benefits
+   - define business model
+   - define cost structure and revenue shared / split
+   - define benefits to members from one hackerspace to another
+3. Define clear technical requirements (functional and non-functional) from the business requirements
+4. Implement definitions from biz/tech reqs
+   - define JSON schema representing a hackerspace's belonging to / membership to the network
+   - define JSON schema for members + memberships
+   - define protocol for storing and retrieving JSON schema
+   - define protocol for proof request/response (request proof of membership/response with proof)
+   - implement TBD primitives building a "one-click" hackerspace technical repo
+   - research alternative protocols and interoperability with SSI/DIDs (e.g. nostr)
+5. Scale all business and technical resources to the world onboarding all bitcoin hackerspaces
