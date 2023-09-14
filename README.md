@@ -1,4 +1,4 @@
-![image](https://github.com/ATLBitLab/bitcoin-hackerspace-network-initiative/assets/19941207/eab4c411-76bb-49de-ba99-17ad4c34e710)
+![image](https://github.com/ATLBitLab/initiative-bitcoin-hackerspace-network/assets/19941207/b1bdfd51-393b-4e67-9e7f-4742c8dcfd47)
 
 ## Summary
 Initiative: Bitcoin Hackerspace Network is a self-sovereign movement to connect bitcoin-focused hackerspaces across the globe into a decentralized network
