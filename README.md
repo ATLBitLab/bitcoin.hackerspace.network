@@ -1,5 +1,5 @@
 # Bitcoin Hackerspace Network
-![BitcoinHackerspaceNetwork](./img/BitcoinHackerspaceNetwork.png)
+[![BitcoinHackerspaceNetwork](./img/BitcoinHackerspaceNetwork.png)](https://bitcoin.hackerspace.network)
 
 ## Summary
 Bitcoin Hackerspace Network (BitHackNet) is a self-sovereign movement to connect bitcoin-focused hackerspaces across the globe to form a decentralized network 
@@ -26,10 +26,24 @@ Generally speaking, "onboarding" requires selecting a memebership, paying an inv
     - [ ] Research alternative protocols and interoperability with SSI/DIDs (e.g. nostr)
 5. Onboard all bitcoin hackerspaces globally that want to participate
 
-## Hackerspace Credential Schema Suggestion (HACS)
+## Hackerspace Credential and Key Schema Suggestion (HaCKS)*
+_*HaCKS is a temp working name, looking for feedback on good names for submitting improvements to the schemas used for various cerdentials and entity interactions_
+
+What should we can improvement proposals submitted to BitHackNet?
+1. Hackerspace Credential and Key Schema Suggestions (HaCKSs, HaCKS, HACKS)
+2. HackNet Improvement Proposals (HIPs)
+3. Schema Improvement Proposals for Hackerspace Entity Network (SIPHENs)
+4. Design of Credential Schemas (DOCS) for Bitcoin Hackerspaces
+5. Bitcoin Third Place Network Improvement Proposals (BTPNIP)
+6. Bitcoin Hackerspace Network Improvement Proposals (BitHackNIP)
+7. Good Recommendations and Proposals for Hackerspaces (GRaPHs)
+8. Hackerspace Identity Credential and Key Schema Suggestion (HICKS)*
+9. Hackerspace Identity Schema Suggestion (HISS)*
+
 Below are proposed credential schemas for the Bitcoin Hackerspace Network. If you have improvements or suggestions, please feel free to fork and submit a PR.
 
-|    Version    |     Credentials & Schemas      |     Title     |                      Description                                                                              |
-|---------------|--------------------------------|---------------|---------------------------------------------------------------------------------------------------------------|
-| [1](./1.0.0/) |  [temp](./1.0.0/schema.json)   |  Temp Schema  |  Defined large, nested schema as a catch all to get something completed for iterative sake                    |
-| [2](./2.0.0/) |  [base](./2.0.0/schemas/)      |  Base Schemas |  Broke out each entity into its own credential, plan to reference parent child relationships beteween schemas |
+|        Version       |          Documentation         |     Title     |     Author    |
+|----------------------|--------------------------------|---------------|---------------|
+| [0](./hacks-0000.md) |   [hacks-0000](./hacks-0000)   | HaCKS Process |  Bryan Nonni  |
+| [1](./hacks-0001.md) |   [hacks-0001](./hacks-0001/)  |  Temp Schema  |  Bryan Nonni  |
+| [2](./hacks-0002.md) |   [hacks-0002](./hacks-0002/)  |  Base Schemas |  Bryan Nonni  |
