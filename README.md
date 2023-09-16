@@ -2,7 +2,7 @@
 [![bitcoin-hackerspace-network-header-img](./graph-0000/header.png)](https://bitcoin.hackerspace.network)
 
 ## BitHackNet Summary
-Bitcoin Hackerspace Network (BitHackNet) is a self-sovereign movement to connect bitcoin-focused hackerspaces across the globe forming a decentralized network 
+Bitcoin Hackerspace Network (BitHackNet) is a self-sovereign movement connecting bitcoin-focused hackerspaces across the globe to form a decentralized network 
 of physical bitcoin-focused spaces. The specific goals of these hackerspaces vary, but the first principle that all are built upon is the idea of building builders.
 
 BitHackNet strives to achieve this goal by providing its members and member hackerspaces with the technology to easily onboard new members in a cryptographically verifiable way. Self-sovereign identity verifiable credentials is part of the solution while a communications protocol provides the other part. Together, these two technology primitives can be used to issue credentials to bitcoiners wanting to join their local hackerspace and gain access to the entirty of BitHackNet. To become a member of BitHackNet, contact a hackerspace participating in the network (typically one that is closest to you) and ask about onboarding.
