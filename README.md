@@ -1,4 +1,7 @@
 # Bitcoin Hackerspace Network
+
+**This project is not actively maintained and is archived for posterity.**
+
 [![bitcoin-hackerspace-network-header-img](./graph-0000/header.png)](https://bitcoin.hackerspace.network)
 
 ## BitHackNet Summary
